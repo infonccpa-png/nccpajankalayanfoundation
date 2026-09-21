@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NCCPA Jankalyan Foundation | सेवा, अधिकार और जागरूकता</title>
+
+<meta name="description"
+content="NCCPA Jankalyan Foundation - शिक्षा, स्वास्थ्य, महिला सशक्तिकरण, सरकारी योजनाओं और जन-जागरूकता के लिए कार्यरत संस्था।">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+    color:#222;
+    line-height:1.6;
+}
+
+header{
+    background:#ffffff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,.12);
+}
+
+.header{
+    max-width:1200px;
+    margin:auto;
+    padding:12px 18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-icon{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:#075e54;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    font-size:15px;
+}
+
+.logo h1{
+    font-size:18px;
+    color:#075e54;
+}
+
+.logo p{
+    font-size:11px;
+    color:#666;
+}
+
+.menu-btn{
+    border:none;
+    background:#075e54;
+    color:#fff;
+    padding:9px 13px;
+    border-radius:6px;
+    font-size:20px;
+    cursor:pointer;
+}
+
+nav{
+    display:none;
+    background:#075e54;
+}
+
+nav a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:12px 18px;
+    border-bottom:1px solid rgba(255,255,255,.15);
+}
+
+nav.show{
+    display:block;
+}
+
+/* HERO */
+
+.hero{
+    min-height:430px;
+    padding:70px 20px;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.hero-content{
+    max-width:850px;
+    margin:auto;
+}
+
+.hero h2{
+    font-size:34px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 22px;
+    border-radius:7px;
+    text-decoration:none;
+    margin:5px;
+    font-weight:bold;
+}
+
+.btn-primary{
+    background:#ff9800;
+    color:#fff;
+}
+
+.btn-light{
+    background:#fff;
+    color:#075e54;
+}
+
+/* COMMON */
+
+section{
+    padding:55px 18px;
+}
+
+.container{
+    max-width:1150px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.section-title h2{
+    color:#075e54;
+    font-size:28px;
+}
+
+.section-title p{
+    color:#666;
+}
+
+/* ABOUT */
+
+.about{
+    background:white;
+}
+
+.about-box{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+.about-box p{
+    margin-bottom:12px;
+}
+
+/* SERVICES */
+
+.services{
+    background:#f5f7fa;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
+}
+
+.card{
+    background:white;
+    padding:25px 18px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.icon{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.card h3{
+    color:#075e54;
+    margin-bottom:8px;
+}
+
+.card p{
+    color:#666;
+    font-size:14px;
+}
+
+/* CTA */
+
+.cta{
+    background:#075e54;
+    color:white;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.cta p{
+    margin-bottom:20px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#123;
+    color:white;
+    padding:40px 18px 20px;
+}
+
+.footer-grid{
+    max-width:1150px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+footer h3{
+    margin-bottom:12px;
+}
+
+footer p,
+footer a{
+    color:#ddd;
+    font-size:14px;
+}
+
+footer a{
+    display:block;
+    text-decoration:none;
+    margin:5px 0;
+}
+
+.copyright{
+    text-align:center;
+    border-top:1px solid #456;
+    margin-top:25px;
+    padding-top:15px;
+    font-size:13px;
+    color:#bbb;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    width:55px;
+    height:55px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:27px;
+    box-shadow:0 4px 15px rgba(0,0,0,.3);
+    z-index:999;
+}
+
+@media(min-width:800px){
+
+    .menu-btn{
+        display:none;
+    }
+
+    nav{
+        display:block;
+        background:#075e54;
+    }
+
+    nav .nav-inner{
+        max-width:1200px;
+        margin:auto;
+        display:flex;
+        flex-wrap:wrap;
+    }
+
+    nav a{
+        border:none;
+        padding:12px 10px;
+        font-size:14px;
+    }
+
+    .hero h2{
+        font-size:48px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="header">
+
+<div class="logo">
+
+<div class="logo-icon">
+NCCPA
+</div>
+
+<div>
+<h1>NCCPA Jankalyan Foundation</h1>
+<p>हर घर तक सेवा, हर दिल में विश्वास</p>
+</div>
+
+</div>
+
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+</div>
+
+<nav id="nav">
+
+<div class="nav-inner">
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#projects">Projects</a>
+<a href="#health">Health Camp</a>
+<a href="#education">Education</a>
+<a href="#women">Women</a>
+<a href="#schemes">Govt Schemes</a>
+<a href="#volunteer">Volunteer</a>
+<a href="#donate">Donate</a>
+<a href="#gallery">Gallery</a>
+<a href="#news">News</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h2>आपातकाल हो या अधिकार – हम हैं तैयार</h2>
+
+<p>
+NCCPA Jankalyan Foundation के साथ
+समाज सेवा, जन-जागरूकता और विकास की ओर एक कदम
+</p>
+
+<a href="#services" class="btn btn-primary">
+हमारी सेवाएँ
+</a>
+
+<a href="#volunteer" class="btn btn-light">
+Volunteer बनें
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>हमारे बारे में</h2>
+
+<p>NCCPA Jankalyan Foundation</p>
+
+</div>
+
+<div class="about-box">
+
+<p>
+<strong>NCCPA Jankalyan Foundation</strong>
+एक सामाजिक संस्था है, जिसका उद्देश्य समाज के जरूरतमंद
+लोगों तक सेवा, जागरूकता और सहायता पहुँचाना है।
+</p>
+
+<p>
+हम शिक्षा, स्वास्थ्य, महिला सशक्तिकरण,
+सरकारी योजनाओं की जानकारी, कौशल विकास,
+मानव अधिकार और जन-जागरूकता जैसे क्षेत्रों में
+कार्य करने के लिए प्रतिबद्ध हैं।
+</p>
+
+<p>
+<strong>हमारा संकल्प:</strong>
+हर घर तक सेवा, हर दिल में विश्वास।
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>हमारी प्रमुख सेवाएँ</h2>
+
+<p>समाज के विभिन्न वर्गों तक सहायता और जागरूकता</p>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">🏥</div>
+<h3>स्वास्थ्य सेवा</h3>
+<p>स्वास्थ्य जागरूकता एवं स्वास्थ्य शिविर।</p>
+</div>
+
+<div class="card">
+<div class="icon">📚</div>
+<h3>शिक्षा</h3>
+<p>शिक्षा एवं डिजिटल लर्निंग को बढ़ावा।</p>
+</div>
+
+<div class="card">
+<div class="icon">👩</div>
+<h3>महिला सशक्तिकरण</h3>
+<p>महिलाओं के अधिकार एवं आर्थिक सशक्तिकरण।</p>
+</div>
+
+<div class="card">
+<div class="icon">🏛️</div>
+<h3>सरकारी योजनाएँ</h3>
+<p>सरकारी योजनाओं की जानकारी एवं जागरूकता।</p>
+</div>
+
+<div class="card">
+<div class="icon">🤝</div>
+<h3>मानव अधिकार</h3>
+<p>अधिकारों के प्रति जन-जागरूकता।</p>
+</div>
+
+<div class="card">
+<div class="icon">💼</div>
+<h3>कौशल विकास</h3>
+<p>रोजगार एवं कौशल विकास के लिए प्रशिक्षण।</p>
+</div>
+
+<div class="card">
+<div class="icon">🌾</div>
+<h3>ग्रामीण विकास</h3>
+<p>ग्रामीण क्षेत्रों में विकास एवं जागरूकता।</p>
+</div>
+
+<div class="card">
+<div class="icon">🆘</div>
+<h3>आपदा सहायता</h3>
+<p>आपातकाल एवं आपदा के समय सहायता प्रयास।</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>हमारे प्रोजेक्ट</h2>
+
+<p>समाजहित में संचालित एवं प्रस्तावित पहल</p>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">🌱</div>
+<h3>जन-जागरूकता अभियान</h3>
+<p>सरकारी योजनाओं एवं नागरिक अधिकारों की जानकारी।</p>
+</div>
+
+<div class="card">
+<div class="icon">🏥</div>
+<h3>स्वास्थ्य जागरूकता</h3>
+<p>स्वास्थ्य शिविर एवं preventive health awareness।</p>
+</div>
+
+<div class="card">
+<div class="icon">📖</div>
+<h3>NCCPA ज्ञानदीप योजना</h3>
+<p>शिक्षा एवं डिजिटल ज्ञान को बढ़ावा देने की पहल।</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HEALTH -->
+
+<section class="services" id="health">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>🏥 Health Camp</h2>
+
+<p>स्वास्थ्य जागरूकता एवं शिविर</p>
+
+</div>
+
+<div class="card">
+
+<h3>स्वास्थ्य शिविर की जानकारी</h3>
+
+<p>
+यहाँ आगामी स्वास्थ्य शिविर की तारीख,
+स्थान, समय और पंजीकरण की जानकारी दिखाई जाएगी।
+</p>
+
+<a href="#" class="btn btn-primary">
+Camp Details
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>📚 शिक्षा एवं कौशल</h2>
+
+<p>शिक्षा से सशक्त समाज की ओर</p>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Digital Education</h3>
+<p>डिजिटल शिक्षा एवं कंप्यूटर जागरूकता।</p>
+</div>
+
+<div class="card">
+<h3>Skill Development</h3>
+<p>कौशल प्रशिक्षण एवं रोजगार जागरूकता।</p>
+</div>
+
+<div class="card">
+<h3>E-Library</h3>
+<p>ज्ञान और अध्ययन सामग्री तक पहुँच।</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WOMEN -->
+
+<section class="services" id="women">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>👩 महिला एवं बाल विकास</h2>
+
+<p>सशक्त महिला, सुरक्षित परिवार और बेहतर समाज</p>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>महिला अधिकार</h3>
+<p>महिलाओं को उनके अधिकारों के प्रति जागरूक करना।</p>
+</div>
+
+<div class="card">
+<h3>SHG जागरूकता</h3>
+<p>स्वयं सहायता समूहों एवं आर्थिक गतिविधियों की जानकारी।</p>
+</div>
+
+<div class="card">
+<h3>बाल संरक्षण</h3>
+<p>बच्चों की शिक्षा, सुरक्षा और अधिकारों के प्रति जागरूकता।</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SCHEMES -->
+
+<section id="schemes">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>🏛️ सरकारी योजनाएँ</h2>
+
+<p>योजनाओं की जानकारी सही व्यक्ति तक पहुँचाने का प्रयास</p>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Ayushman Bharat</h3>
+<p>स्वास्थ्य योजना की जानकारी।</p>
+</div>
+
+<div class="card">
+<h3>PM-KISAN</h3>
+<p>किसानों से संबंधित योजना जानकारी।</p>
+</div>
+
+<div class="card">
+<h3>PMAY</h3>
+<p>आवास योजना की जानकारी।</p>
+</div>
+
+<div class="card">
+<h3>अन्य योजनाएँ</h3>
+<p>पेंशन, रोजगार, छात्रवृत्ति एवं अन्य योजनाएँ।</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- VOLUNTEER CTA -->
+
+<section class="cta" id="volunteer">
+
+<div class="container">
+
+<h2>🤝 समाज सेवा से जुड़ें</h2>
+
+<p>
+आप भी NCCPA Jankalyan Foundation के
+Volunteer बनकर सामाजिक कार्यों में सहयोग कर सकते हैं।
+</p>
+
+<a href="#" class="btn btn-light">
+Volunteer Registration
+</a>
+
+</div>
+
+</section>
+
+
+<!-- DONATE -->
+
+<section id="donate">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>💝 सहयोग करें</h2>
+
+<p>आपका सहयोग सामाजिक सेवा के प्रयासों को मजबूत कर सकता है।</p>
+
+</div>
+
+<div class="card">
+
+<h3>NCCPA Jankalyan Foundation</h3>
+
+<p>
+Donation की पूरी जानकारी और भुगतान विकल्प यहाँ
+बाद में जोड़े जाएंगे।
+</p>
+
+<a href="#" class="btn btn-primary">
+Donate Now
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- NEWS -->
+
+<section class="services" id="news">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>📰 Latest News</h2>
+
+<p>संस्था की नवीनतम गतिविधियाँ एवं अपडेट</p>
+
+</div>
+
+<div class="card">
+
+<h3>Latest Updates जल्द यहाँ दिखाई देंगे</h3>
+
+<p>
+Admin Panel से News जोड़ने के बाद
+यह सेक्शन अपने आप अपडेट किया जाएगा।
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>🖼️ Photo Gallery</h2>
+
+<p>हमारी गतिविधियों की झलक</p>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Health Camp</h3>
+<p>फोटो जल्द जोड़ी जाएंगी।</p>
+</div>
+
+<div class="card">
+<h3>Awareness Campaign</h3>
+<p>फोटो जल्द जोड़ी जाएंगी।</p>
+</div>
+
+<div class="card">
+<h3>Education Activity</h3>
+<p>फोटो जल्द जोड़ी जाएंगी।</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="services" id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>📞 संपर्क करें</h2>
+
+<p>NCCPA Jankalyan Foundation</p>
+
+</div>
+
+<div class="card">
+
+<h3>हमारा पता</h3>
+
+<p>
+Vill-BOCHGAON, PO-BOCHGAON,<br>
+Block-KASBA, PS-JALALGARH,<br>
+Dist-PURNEA, Bihar - 854330
+</p>
+
+<br>
+
+<p>
+<strong>Email:</strong>
+nccpajankalyanfoundation@gmail.com
+</p>
+
+<br>
+
+<a href="mailto:nccpajankalyanfoundation@gmail.com"
+class="btn btn-primary">
+Email करें
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<h3>NCCPA Jankalyan Foundation</h3>
+
+<p>
+आपातकाल हो या अधिकार – हम हैं तैयार।
+</p>
+
+<p>
+हर घर तक सेवा, हर दिल में विश्वास।
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Quick Links</h3>
+
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#health">Health Camp</a>
+<a href="#volunteer">Volunteer</a>
+<a href="#donate">Donate</a>
+
+</div>
+
+
+<div>
+
+<h3>Services</h3>
+
+<a href="#education">Education</a>
+<a href="#women">Women Empowerment</a>
+<a href="#schemes">Government Schemes</a>
+<a href="#gallery">Gallery</a>
+
+</div>
+
+
+<div>
+
+<h3>Contact</h3>
+
+<p>Bochgaon, Kasba, Purnea, Bihar</p>
+<p>854330</p>
+<p>nccpajankalyanfoundation@gmail.com</p>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 NCCPA Jankalyan Foundation.
+All Rights Reserved.
+
+</div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a class="whatsapp"
+href="https://wa.me/918084281046"
+target="_blank"
+aria-label="WhatsApp">
+💬
+</a>
+
+
+<script>
+
+function toggleMenu(){
+
+    document.getElementById("nav").classList.toggle("show");
+
+}
+
+document.querySelectorAll("nav a").forEach(function(link){
+
+    link.addEventListener("click",function(){
+
+        document.getElementById("nav").classList.remove("show");
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
